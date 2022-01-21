@@ -38,7 +38,7 @@ do {
 
 }while ( q1 != `s` || q1 != `n`);
 
-//q1=s =>
+//******************************* */
 if (q1=='s') {
     console.log('\n\
     ***Você escolheu usar armaduras leves***\n\
@@ -52,22 +52,38 @@ armaduras leves, pois deve resistir a batalha pelo maior periodo \n\
 Seus generais aguardam uma decisão.');
     
 do {
-    if ((q1s2 == 's' || q1s2 == 'n')){
+    if ((q2 == 's' || q2 == 'n')){
         break
 
     }else {
 
-            if ((q1s2 != `s` || q1s2 != `n`) && q1s2 != null) {
+            if ((q2 != `s` || q2 != `n`) && q2 != null) {
 
                 console.log(wrgmsg);
             }            
     
-            var q1s2 = prompt('Usar armadura pesada na infantaria? [s] sim ou [n] não ');
+            var q2 = prompt('Usar armadura pesada na infantaria? [s] sim ou [n] não ');
 
                
         }
-    }while (q1s2 != `s` || q1s2 != `n`);
+    }while (q2 != `s` || q2 != `n`);
 
-    if (q1s2 ==`s`) {
-//yay
-}
+    
+console.log('Após decidir sobre a armadura da infantaria, um sufoco vem a mente:\n\
+A infantaria precisa receber uma imensa baixa para que haja tempo de concluir a estratégia.')
+
+do {
+    if (q3=='s' || q3== 'n'){
+
+        break
+
+    }else {
+
+        if ((q3 != `s` || q3 != `n`) && q3!=null) {
+            console.log(wrgmsg);
+        }   
+        
+        var q3 = prompt('Sacrificar? [s] sim ou [n] não ');
+    }
+
+}while ( q3 != `s` || q3 != `n`);
