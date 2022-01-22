@@ -113,5 +113,5 @@ if (q3 == 's') {
 
 if (dano < 0.5) {
     console.log (`Você sacrificou o batalhão de seu único amigo, e com isso, ele também
-    . Vejamos se valeu a pena`)
+    . Vejamos se valeu a pena!`)
 }
