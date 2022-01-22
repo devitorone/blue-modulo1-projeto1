@@ -23,67 +23,95 @@ Ele o procura afim de mitigar a sua inferioridade numérica e propor uma estrat�
 "Meu Rei, estamos enfretando números muito altos, mas temos uma chance. Devemos usar armaduras leves.');
 // pergunta 1
 do {
-    if (q1=='s' || q1== 'n'){
-
-        break
-
-    }else {
-
-        if ((q1 != `s` || q1 != `n`) && q1!=null) {
+        if (q1 != null) {
             console.log(wrgmsg);
-        }   
-        
-        var q1 = prompt('Usar armaduras leves? [s] sim ou [n] não ');
-    }
-
-}while ( q1 != `s` || q1 != `n`);
-
-//******************************* */
-if (q1=='s') {
-    console.log('\n\
-    ***Você escolheu usar armaduras leves***\n\
-    ');
-
-    console.log('Após decidir por armaduras leves, seus generais expõe uma preocupação:')
-}    
-console.log('O inimigo tem o terreno alto.\n\
-A infantaria, que formará a primeira interface de confronto, nao tem o costume de usar \n\
-armaduras leves, pois deve resistir a batalha pelo maior periodo \n\
-Seus generais aguardam uma decisão.');
-    
-do {
-    if ((q2 == 's' || q2 == 'n')){
-        break
-
-    }else {
-
-            if ((q2 != `s` || q2 != `n`) && q2 != null) {
-
-                console.log(wrgmsg);
-            }            
-    
-            var q2 = prompt('Usar armadura pesada na infantaria? [s] sim ou [n] não ');
-
-               
         }
-    }while (q2 != `s` || q2 != `n`);
+        console.log('Usar armaduras leves nos flancos e na infantaria (unidades escondidas no início da batalha)? ');
+        var q1 = prompt('[s] sim ou [n] não => ');
 
+}while ( q1 != `s` && q1 != `n`);
+
+switch (q1) {
+    case 's':
+        armaduraG = 'leves'
+        break
+    case 'n':
+        armaduraG = 'pesadas'
+        break
+        
+}
+
+console.log(`\n\
+***Você escolheu usar armaduras ${armaduraG}***\n\
+`);
+
+console.log(`Após decidir por armaduras ${armaduraG}, seus generais expõem uma preocupação:`)
+
+console.log('O inimigo tem o terreno alto;\n\
+A infantaria que formará a primeira interface de confronto (1º batalhão) não tem o costume de usar \n\
+armaduras leves, pois deve resistir a batalha pelo maior periodo.\n\
+Dito isso, seus generais aguardam uma decisão.\n\
+');
+
+ // Questão 2   
+do {
     
-console.log('Após decidir sobre a armadura da infantaria, um sufoco vem a mente:\n\
-A infantaria precisa receber uma imensa baixa para que haja tempo de concluir a estratégia.')
+    if (q2 != null) {
+
+        console.log(wrgmsg);
+    }            
+
+    var q2 = prompt('Usar armadura pesada no 1º batalhão? [s] sim ou [n] não ');       
+        
+}while (q2 != `s` && q2 != `n`);
+
+switch (q2) {
+    case 's':
+        armadura1B = 'pesada'
+        break
+    case 'n':
+        armadura1B = 'leve'
+        break
+}
+
+console.log(`
+*** O primeiro batalhão usará armadura ${armadura1B} ***
+`)
+    
+
+console.log(`
+A BATALHA SE INICIA
+`)
+
+console.log(`Seu inimigo envia o primeiro batalhão, de armaduras pesadas. O restante da infataria 
+aguarda junto da cavalaria.
+Seu conselheiro de maior confiança, seu amigo, está liderando o 1ºB.
+
+A batalha é sangrenta, suja e árdua, mas seus soldados estão resistindo à superioridade numérica.
+Seu seu amigo então sinaliza que você deve esperar mais para enviar o restante do exército.
+Após um tempo, você percebe que o 1ºB está começando a ceder. Porém, para a emboscada funcionar,
+seu inimigo tem que enviar o restante de seu exército para a barro, formado pela chuva.
+Esperar mais poderá causar um dano expressivo em seu exército.
+
+Existe uma chance de 50% para esse dano lhe atingir.`);
 
 do {
-    if (q3=='s' || q3== 'n'){
+    
+    if (q3 != null) {
 
-        break
+        console.log(wrgmsg);
+    }            
 
-    }else {
-
-        if ((q3 != `s` || q3 != `n`) && q3!=null) {
-            console.log(wrgmsg);
-        }   
+    var q3 = prompt('Esperar mais [s] sim ou [n] não ');       
         
-        var q3 = prompt('Sacrificar? [s] sim ou [n] não ');
-    }
+}while (q3 != `s` && q3 != `n`);
 
-}while ( q3 != `s` || q3 != `n`);
+if (q3 == 's') {
+    var dano = Math.random();
+    
+}
+
+if (dano < 0.5) {
+    console.log (`Você sacrificou o batalhão de seu único amigo, e com isso, ele também
+    . Vejamos se valeu a pena`)
+}
