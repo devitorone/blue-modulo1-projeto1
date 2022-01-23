@@ -11,22 +11,23 @@ console.log('Mas ainda resta um obstaculo à supremacia do seu governo, o fim da
 console.log('')
 console.log('O campo de batalha está posto. O clima está chuvoso ');*/
 
-console.log('O confronto\n\
-\n\
-Dong Zhuo está morto. A China clama por um governante que traga paz.\n\
-Você é o famigerado general Caocao em sua batalha final pelo controle da China contra o lendário guerreiro Lü Bu.\n\
-Sua jornada foi longa e está proxima de seu fim. Derrotaste a rainha bandoleira ao norte,\n\
-os reclamantes ao trono do Sul não foram o suficiente para lhe parar. Até mesmo Liu Bei jurou lealdade a você.\n\
-Mas ainda resta um obstaculo à supremacia do seu governo, o fim da era dos 3 reinos e inicio de uma paz duradoura.\n\
-Durante os preparativos da batalha, seu conselheiro de maior confiança percebe que está se formando um clima chuvoso.\n\
-Ele o procura afim de mitigar a sua inferioridade numérica e propor uma estratégia.\n\
-"Meu Rei, estamos enfretando números muito altos, mas temos uma chance. Devemos usar armaduras leves.');
+console.log(`O confronto
+
+Dong Zhuo está morto. A China clama por um governante que traga paz.
+Você é o famigerado general Caocao em sua batalha final pelo controle da China contra o lendário guerreiro Lü Bu.
+Sua jornada foi longa e está proxima de seu fim. Derrotaste a rainha bandoleira ao norte,
+os reclamantes ao trono do Sul não foram o suficiente para lhe parar. Até mesmo Liu Bei jurou lealdade a você.
+Mas ainda resta um obstaculo à supremacia do seu governo, o fim da era dos 3 reinos e inicio de uma paz duradoura.
+Durante os preparativos da batalha, seu conselheiro de maior confiança percebe que está se formando um clima chuvoso.
+Ele o procura afim de mitigar a sua inferioridade numérica e propor uma estratégia.
+"Meu Rei, estamos enfretando números muito altos, mas temos uma chance. Devemos usar armaduras leves"
+ `);
 // pergunta 1
 do {
         if (q1 != null) {
             console.log(wrgmsg);
         }
-        console.log('Usar armaduras leves nos flancos e na infantaria (unidades escondidas no início da batalha)? ');
+        console.log('Usar armaduras leves nos flancos e nas infantarias ( unidades escondidas no início da batalha)? ');
         var q1 = prompt('[s] sim ou [n] não => ');
 
 }while ( q1 != `s` && q1 != `n`);
@@ -37,21 +38,20 @@ switch (q1) {
         break
     case 'n':
         armaduraG = 'pesadas'
-        break
-        
+        break      
 }
 
-console.log(`\n\
-***Você escolheu usar armaduras ${armaduraG}***\n\
+console.log(`
+***Você escolheu usar armaduras ${armaduraG}***
 `);
 
 console.log(`Após decidir por armaduras ${armaduraG}, seus generais expõem uma preocupação:`)
 
-console.log('O inimigo tem o terreno alto;\n\
-A infantaria que formará a primeira interface de confronto (1º batalhão) não tem o costume de usar \n\
-armaduras leves, pois deve resistir a batalha pelo maior periodo.\n\
-Dito isso, seus generais aguardam uma decisão.\n\
-');
+console.log(`O inimigo tem o terreno alto;
+A infantaria que formará a primeira interface de confronto (1º batalhão)
+não tem o costume de usar armaduras leves, pois deve resistir a batalha pelo maior periodo.
+Dito isso, seus generais aguardam uma decisão.
+'`);
 
  // Questão 2   
 do {
@@ -81,19 +81,21 @@ console.log(`
 
 console.log(`
 A BATALHA SE INICIA
-`)
 
-console.log(`Seu inimigo envia o primeiro batalhão, de armaduras pesadas. O restante da infataria 
+Seu inimigo envia o primeiro batalhão, de armaduras pesadas. O restante da infataria 
 aguarda junto da cavalaria.
 Seu conselheiro de maior confiança, seu amigo, está liderando o 1ºB.
 
 A batalha é sangrenta, suja e árdua, mas seus soldados estão resistindo à superioridade numérica.
-Seu seu amigo então sinaliza que você deve esperar mais para enviar o restante do exército.
-Após um tempo, você percebe que o 1ºB está começando a ceder. Porém, para a emboscada funcionar,
-seu inimigo tem que enviar o restante de seu exército para a barro, formado pela chuva.
-Esperar mais poderá causar um dano expressivo em seu exército.
+Seu amigo então sinaliza que você deve esperar mais para enviar o restante do exército.
+...
+Após um tempo, você percebe que o 1ºB está começando a ceder. Porém, para a emboscada e o ataque 
+flanqueado funcionar, seu inimigo tem que enviar o restante de seu exército para a lama, formada
+pela chuva, onde ficará com a mobilidade prejudicada.
 
-Existe uma chance de 50% para esse dano lhe atingir.`);
+Esperar mais poderá causar um dano expressivo no 1ºB.
+Existe uma chance de 50% para esse dano lhe atingir.
+`);
 
 do {
     
@@ -102,16 +104,29 @@ do {
         console.log(wrgmsg);
     }            
 
-    var q3 = prompt('Esperar mais [s] sim ou [n] não ');       
+    var q3 = prompt('Esperar mais? [s] sim ou [n] não ');       
         
 }while (q3 != `s` && q3 != `n`);
 
 if (q3 == 's') {
-    var dano = Math.random();
-    
+    let dano = Math.random();
+    // Porque essa é a historia do unificador de um império. Game is HARD.
+    if (dano < 0.5) {
+        console.log (`Você sacrificou o batalhão de seu amigo, e com isso, ele também. 
+        Vejamos se valerá a pena!`)
+    }else if (dano > 0.5) {
+        console.log(`O 1ºB resiste de forma gloriosa. Canções serão cantadas sobre estes soldados.`)
+    }
+
+    console.log(`Você esperou e seu inimigo, em sua arrogância e inexperiência no comando, atacou 
+prematuramente com o restante do exército na esperança de finalizar logo e com poucas baixas. 
+
+O inimigo está onde você quer.`)
+    let q4 = prompt(``)
+
+}else {
+    //q3=n
+
+    console.log(`Você priorizou a vida de seus soldados, e principalmente, a de seu amigo`)
 }
 
-if (dano < 0.5) {
-    console.log (`Você sacrificou o batalhão de seu único amigo, e com isso, ele também
-    . Vejamos se valeu a pena!`)
-}
