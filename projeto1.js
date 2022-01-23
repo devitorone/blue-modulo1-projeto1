@@ -121,12 +121,12 @@ if (q3 == 's') {
     console.log(`Você esperou e seu inimigo, em sua arrogância e inexperiência no comando, atacou 
 prematuramente com o restante do exército na esperança de finalizar logo e com poucas baixas. 
 
-O inimigo está onde você quer.`)
-    let q4 = prompt(``)
+O inimigo está onde você quer. Seus flanqueadores aguardam seu comando. `)
+    let q4 = prompt(`Questao 4`)
 
-}else {
+}else if (q3 == 'n') {
     //q3=n
 
-    console.log(`Você priorizou a vida de seus soldados, e principalmente, a de seu amigo`)
+    console.log(`Você priorizou as vidas de seus soldados, e principalmente, a de seu amigo.`)
 }
 
