@@ -51,7 +51,7 @@ console.log(`O inimigo tem o terreno alto;
 A infantaria que formará a primeira interface de confronto (1º batalhão)
 não tem o costume de usar armaduras leves, pois deve resistir a batalha pelo maior periodo.
 Dito isso, seus generais aguardam uma decisão.
-'`);
+`);
 
  // Questão 2   
 do {
@@ -118,7 +118,7 @@ if (q3 == 's') {
         console.log(`O 1ºB resiste de forma gloriosa. Canções serão cantadas sobre estes soldados.`)
     }
 
-    console.log(`Você esperou e seu inimigo, em sua arrogância e inexperiência no comando, atacou 
+    console.log(`Você esperou e seu inimigo, com arrogância e inexperiência no comando, atacou 
 prematuramente com o restante do exército na esperança de finalizar logo e com poucas baixas. 
 
 O inimigo está onde você quer. Seus flanqueadores aguardam seu comando. `)
@@ -129,13 +129,35 @@ O inimigo está onde você quer. Seus flanqueadores aguardam seu comando. `)
             console.log(wrgmsg);
         }            
 
-        let q4 = prompt(`Agora você deve escolher se ataca com os arqueiros primeiro.
-        atacar com os arqueiros? sim [s] ou não [n] ?`)
+        var q4 = prompt(`Agora você deve escolher se ataca com os arqueiros primeiro.
+        atacar com os arqueiros? 
+        sim [s] ou não [n] ?`)
         
     }while (q4 != `s` && q4 != `n`);
 
     if (q4 = 's') {
+        console.log(`*** Você atacou,antes de mais nada, com seus arqueiros, dizimando centenas. ***
         
+        Após o ataque dos arqueiros, o restante de seu exército tomou conta do campo de batalha.
+    Resta ainda finalizar o líder inimigo. O poderoso Lu Bu. Todos os seus soldados estão com a 
+    atenção voltada para vocês. Lu Bu solicita um duelo.
+    `)
+        var q5 = prompt(`Aceitar desafio de Lu Bu? sim [s] ou não [n]?`)
+
+        if (q5 = 's') {
+
+            console.log(`Ao aceitar o duelo de Lu Bu você acena para que ele venha de encontro com
+            seu destino. Mas ele nao consegue sair do lugar. Está de armadura pesada, sobre a lama.
+            Entao, no chao, ajoelhado, ele implora por sua vida. Seus soldados riem da cena.
+            
+            Um soldado desconhecido pega a espada de Lu Bu e diz: Esse imundo não é digno de Vossa Majestade.
+            `)
+
+        }else if (q5='n'){
+
+        }
+
+    }else if (q='n') {
 
     }
 
