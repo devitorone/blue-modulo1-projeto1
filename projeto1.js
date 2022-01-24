@@ -122,7 +122,23 @@ if (q3 == 's') {
 prematuramente com o restante do exército na esperança de finalizar logo e com poucas baixas. 
 
 O inimigo está onde você quer. Seus flanqueadores aguardam seu comando. `)
-    let q4 = prompt(`Questao 4`)
+    do {
+        
+        if (q4 != null) {
+
+            console.log(wrgmsg);
+        }            
+
+        let q4 = prompt(`Agora você deve escolher se ataca com os arqueiros primeiro.
+        atacar com os arqueiros? sim [s] ou não [n] ?`)
+        
+    }while (q4 != `s` && q4 != `n`);
+
+    if (q4 = 's') {
+        
+
+    }
+
 
 }else if (q3 == 'n') {
     //q3=n
