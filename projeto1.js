@@ -1,15 +1,6 @@
 var prompt = require('prompt-sync')();
 
 var wrgmsg = 'reposta precisa ser "s" ou "n"' 
-/*console.log('O confronto');
-console.log('')
-console.log('Dong Zhuo está morto. A China clama por um governante que traga paz.');
-console.log('Você é o famigerado general Caocao em sua batalha final pelo controle da China contra o lendário guerreiro Lü Bu.');
-console.log('Sua jornada foi longa e está proxima de seu fim. Derrotaste a rainha bandoleira ao norte, ')
-console.log('os reclamantes ao trono do Sul na foram o suficiente para lhe parar. Até mesmo Liu Bei jurou lealdade a você.')
-console.log('Mas ainda resta um obstaculo à supremacia do seu governo, o fim da era dos 3 reinos e inicio de uma paza duradoura.')
-console.log('')
-console.log('O campo de batalha está posto. O clima está chuvoso ');*/
 
 console.log(`O confronto
 
@@ -21,13 +12,15 @@ Mas ainda resta um obstaculo à supremacia do seu governo, o fim da era dos 3 re
 Durante os preparativos da batalha, seu conselheiro de maior confiança percebe que está se formando um clima chuvoso.
 Ele o procura afim de mitigar a sua inferioridade numérica e propor uma estratégia.
 "Meu Rei, estamos enfretando números muito altos, mas temos uma chance. Devemos usar armaduras leves"
- `);
+
+Usar armaduras leves nos flancos e nas infantarias ( unidades escondidas no início da batalha)?
+`);
 // pergunta 1
 do {
         if (q1 != null) {
             console.log(wrgmsg);
         }
-        console.log('Usar armaduras leves nos flancos e nas infantarias ( unidades escondidas no início da batalha)? ');
+        console.log('');
         var q1 = prompt('[s] sim ou [n] não => ');
 
 }while ( q1 != `s` && q1 != `n`);
@@ -61,7 +54,7 @@ do {
         console.log(wrgmsg);
     }            
 
-    var q2 = prompt('Usar armadura pesada no 1º batalhão? [s] sim ou [n] não ');       
+    var q2 = prompt('Usar armadura pesada no 1º batalhão? [s] sim ou [n] não => ');       
         
 }while (q2 != `s` && q2 != `n`);
 
@@ -104,7 +97,7 @@ do {
         console.log(wrgmsg);
     }            
 
-    var q3 = prompt('Esperar mais? [s] sim ou [n] não ');       
+    var q3 = prompt('Esperar mais? [s] sim ou [n] não => ');       
         
 }while (q3 != `s` && q3 != `n`);
 
@@ -121,7 +114,8 @@ if (q3 == 's') {
     console.log(`Você esperou e seu inimigo, com arrogância e inexperiência no comando, atacou 
 prematuramente com o restante do exército na esperança de finalizar logo e com poucas baixas. 
 
-O inimigo está onde você quer. Seus flanqueadores aguardam seu comando. `)
+O inimigo está onde você quer. Seus flanqueadores aguardam seu comando.
+Agora você deve escolher se ataca com os arqueiros primeiro. `)
     do {
         
         if (q4 != null) {
@@ -129,9 +123,7 @@ O inimigo está onde você quer. Seus flanqueadores aguardam seu comando. `)
             console.log(wrgmsg);
         }            
 
-        var q4 = prompt(`Agora você deve escolher se ataca com os arqueiros primeiro.
-        atacar com os arqueiros? 
-        sim [s] ou não [n] ?`)
+        var q4 = prompt(`[s] sim ou [n] não => `)
         
     }while (q4 != `s` && q4 != `n`);
 
@@ -141,8 +133,9 @@ O inimigo está onde você quer. Seus flanqueadores aguardam seu comando. `)
         Após o ataque dos arqueiros, o restante de seu exército tomou conta do campo de batalha.
     Resta ainda finalizar o líder inimigo. O poderoso Lu Bu. Todos os seus soldados estão com a 
     atenção voltada para vocês. Lu Bu solicita um duelo.
+    Aceitar desafio de Lu Bu? 
     `)
-        var q5 = prompt(`Aceitar desafio de Lu Bu? sim [s] ou não [n]?`)
+        var q5 = prompt(`[s] sim ou [n] não => `)
 
         if (q5 = 's') {
 
@@ -151,7 +144,7 @@ O inimigo está onde você quer. Seus flanqueadores aguardam seu comando. `)
             Entao, no chao, ajoelhado, ele implora por sua vida. Seus soldados riem da cena.
             
             Um soldado desconhecido pega a espada de Lu Bu e diz: Esse imundo não é digno de Vossa Majestade.
-            `)
+            Todos gritam para que o soldado mate Lu Bu, mas este aguarda sua ordem. Você apenas acena que sim.`)
 
         }else if (q5='n'){
 
