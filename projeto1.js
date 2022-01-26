@@ -157,9 +157,9 @@ sua batalha, mas certamente prejudicará a estabilidade e legitimidade de seu go
     desvantagem numérica.
     ...
     Mesmo perante essa desvantagem, seu exército domina o inimigo. 
-    Falta ainda finalizar o líder. O poderoso Lu Bu. Todos os seus soldados estão com a 
+    Falta ainda finalizar o líder. O poderoso Lu Bu. Todos os soldados estão com a 
     atenção voltada para vocês. Lu Bu solicita um duelo.
-    Aceitar desafio de Lu Bu? `)
+    Aceitar desafio de Lu Bu? `);
     do {
       if (q5 != null) {
         console.log(wrgmsg);
@@ -168,14 +168,13 @@ sua batalha, mas certamente prejudicará a estabilidade e legitimidade de seu go
       var q5 = prompt(`[s] sim ou [n] não => `);
     } while (q5 != `s` && q5 != `n`);
 
-    if (q5 == 's') {
+    if (q5 == "s") {
       console.log(`Você aceita o desafio de Lü Bü.
-      Vocês estão em um terreno mais firme, ainda cheio de lama. Lu Bu está com a mobilidade levemente reduzida.
-      A luta dura por um longo período, entre esquivas e cruzamento de espadas. Até que Lu Bu
-      consegue feri-lo na perna com sua espada enferrujada `)    
-
-    }else if (q5=='n'){
-
+  Vocês estão em um terreno mais firme, ainda cheio de lama. Lu Bu está com a mobilidade levemente 
+  reduzida. A luta dura por um longo período, entre esquivas e cruzamento de espadas. Até que Lu Bu
+  consegue feri-lo na perna com sua espada enferrujada. Mas se recupera rapidamente e dá um golpe
+  final no pescoço de Lu Bu.`);
+    } else if (q5 == "n") {
       console.log(`Você se recusa a duelar contra Lu Bu. Seus soldados ficam receosos sobre o motivo.
 Estão dizendo que falta honra em um covarde e que somente um covarde recusa um duelo. Isso não afeta
 sua batalha, mas certamente prejudicará a estabilidade e legitimidade de seu governo.`);
@@ -185,6 +184,52 @@ sua batalha, mas certamente prejudicará a estabilidade e legitimidade de seu go
   //q3=n
 
   console.log(
-    `Você priorizou as vidas de seus soldados, e principalmente, a de seu amigo.`
-  );
+    `Você priorizou as vidas de seus soldados, e principalmente, a de seu amigo.
+O campo de batalha infla. Sua infantaria ataca e rapidamente elimina o 1ºB inimigo.
+Seu adversário logo reage com uma saraivada de flechas na área dominado por você.
+O momento não poderia ser mais crucial. Você deve escolher se defende sua posição e espera
+o inimigo descer, ou persegui-lo morro acima.
+Perseguir o inimigo?`);
+
+  do {
+    if (q4 != null) {
+      console.log(wrgmsg);
+    }
+
+    var q4 = prompt(`[s] sim ou [n] não => `);
+  } while (q4 != `s` && q4 != `n`);
+
+  if (q4 == 's') {
+    console.log(`Você ordena que seus soldados entrem em formação de defesa contra ataques a 
+distância, e que persigam o exército inimigo até Grande Muralha, se for preciso. Seu adversário
+recua os arqueiros para um ponto mais alto do morro e começa a formar uma linha de resistência
+ao seu avanço. Você ainda tem a cavalaria aguardando a infantaria os alcançar para engajarem na
+perseguição. A escolha é clara:
+Ordenar que a cavalaria tente furar o bloqueio inimigo antes da infantaria os alcançar?
+ `)
+  do {
+    if (q5 != null) {
+      console.log(wrgmsg);
+    }
+
+    var q5 = prompt(`[s] sim ou [n] não => `);
+  } while (q5 != `s` && q5 != `n`);
+
+  if (q5=='s') {
+
+    console.log(`Sua cavalaria fura o bloqueio, dizimando o batalhão de arqueiros inimigos. Um dano
+expressivo.`)
+
+  }else if(q5=='n'){
+
+    console.log(`Sua infantaria alcança a cavalaria., porém você agora se encontra em uma posição de muita
+  desvantagem do terreno. Tudo agora depende do quão bem você escolheu sua estratégia para mitigar
+  os números adversários. `)
+  }
+
+  }else if (q4=='n'){
+
+    console.loge(``)
+
+  }
 }
