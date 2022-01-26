@@ -52,9 +52,7 @@ do {
     console.log(wrgmsg);
   }
 
-  var q2 = prompt(
-    "[s] sim ou [n] não => "
-  );
+  var q2 = prompt("[s] sim ou [n] não => ");
 } while (q2 != `s` && q2 != `n`);
 
 switch (q2) {
@@ -122,27 +120,42 @@ Atacar com os arqueiros antes de enviar a infantaria?
     var q4 = prompt(`[s] sim ou [n] não => `);
   } while (q4 != `s` && q4 != `n`);
 
-  if ((q4 = "s")) {
-    console.log(`*** Você atacou,antes de mais nada, com seus arqueiros, dizimando centenas. ***
+  if (q4 == "s") {
+    console.log(`*** Você atacou, antes de mais nada, com seus arqueiros, dizimando centenas. ***
         
         Após o ataque dos arqueiros, o restante de seu exército tomou conta do campo de batalha.
     Falta ainda finalizar o líder inimigo. O poderoso Lu Bu. Todos os seus soldados estão com a 
     atenção voltada para vocês. Lu Bu solicita um duelo.
     Aceitar desafio de Lu Bu? 
     `);
-    var q5 = prompt(`[s] sim ou [n] não => `);
+    do {
+      if (q5 != null) {
+        console.log(wrgmsg);
+      }
 
-    if ((q5 = "s")) {
-      console.log(`Ao aceitar o duelo de Lu Bu você acena para que ele venha de encontro com
-seu destino. Mas ele nao consegue sair do lugar. Está de armadura pesada, sobre a lama.
+      var q5 = prompt(`[s] sim ou [n] não => `);
+    } while (q5 != `s` && q5 != `n`);
+
+    if (q5 == "s") {
+      console.log(`Ao aceitar o duelo de Lu Bu, você diz para que ele venha de encontro com
+o destino. Mas ele nao consegue sair do lugar. Está de armadura pesada, sobre a lama.
 Entao, no chao, ajoelhado, ele implora por sua vida. Seus soldados riem da cena.
 
 Um soldado desconhecido pega a espada de Lu Bu e diz: Esse imundo não é digno de Vossa Majestade.
-Todos gritam para que o soldado mate Lu Bu, mas este aguarda sua ordem. Você apenas acena que sim.`);
-    } else if ((q5 = "n")) {
-
+Todos gritam para que o soldado mate Lu Bu, mas esse aguarda sua ordem. Você apenas acena que sim.`);
+    } else if (q5 == "n") {
+      console.log(`Você se recusa a duelar contra Lu Bu. Seus soldados ficam receosos sobre o motivo.
+Estão dizendo que falta honra em um covarde e que somente um covarde recusa um duelo. Isso não afeta
+sua batalha, mas certamente prejudicará a estabilidade e legitimidade de seu governo.`);
     }
-  } else if ((q = "n")) {
+  } else if (q4 == "n") {
+    do {
+      if (q5 != null) {
+        console.log(wrgmsg);
+      }
+
+      var q5 = prompt(`[s] sim ou [n] não => `);
+    } while (q5 != `s` && q5 != `n`);
   }
 } else if (q3 == "n") {
   //q3=n
