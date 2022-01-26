@@ -2,6 +2,8 @@ var prompt = require("prompt-sync")();
 
 var wrgmsg = 'reposta precisa ser "s" ou "n"';
 
+var rslt = 0
+
 console.log(`O confronto
 
 Dong Zhuo está morto. A China clama por um governante que traga paz.
@@ -22,6 +24,8 @@ do {
   }
   var q1 = prompt("[s] sim ou [n] não => ");
 } while (q1 != `s` && q1 != `n`);
+
+
 
 switch (q1) {
   case "s":
@@ -222,14 +226,68 @@ expressivo.`)
 
   }else if(q5=='n'){
 
-    console.log(`Sua infantaria alcança a cavalaria., porém você agora se encontra em uma posição de muita
+    console.log(`Sua infantaria alcança a cavalaria, porém você se encontra em uma posição de muita
   desvantagem do terreno. Tudo agora depende do quão bem você escolheu sua estratégia para mitigar
-  os números adversários. `)
+  os números adversários.`)
   }
 
   }else if (q4=='n'){
 
-    console.loge(``)
+    console.log(`Você escolhe não perseguir o inimigo em terreno alto e mantém sua posição.
+  O adversário marcha em sua direçao descendo o morro, sem perceber sua cavalaria escondida.
+  Seus generais logo veem a oportunidade se desenvolver. Você deve atacar os arqueiros ou a infantaria.
+  Atacar os arqueiros?`);
+
+    do {
+      if (q5 != null) {
+        console.log(wrgmsg);
+      }
+
+      var q5 = prompt(`[s] sim ou [n] não => `);
+    } while (q5 != `s` && q5 != `n`);
+// --------------------------------------------------------// 
+    if(q5=='s') {
+
+    }else if(q5=='n') {
+
+    }
 
   }
+}
+
+if (q1=='s'){
+  rslt++
+}
+if (q2=='s') {
+    rslt++
+}
+if (q3=='s'){
+  rslt++
+}
+if (q4=='s'){
+  rslt++
+}
+if (q5=='s'){
+  rslt++  
+}
+
+if (rslt==0){
+  console.log(`
+  Você claramente não estava sóbrio. Tomou todas as decisões erradas. Essa batalha sozinha
+  desmerece todas as suas conquistas anteriores`);
+}
+if (rslt==1){
+  console.log(``)
+}
+if (rslt==2){
+  console.log(``)
+}
+if (rslt==3){
+  console.log(``)
+}
+if (rslt==4){
+  console.log(``)
+}
+if (rslt==5){
+  console.log(``)
 }
