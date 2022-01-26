@@ -95,14 +95,15 @@ do {
 if (q3 == "s") {
   let dano = Math.random();
   // Porque essa é a historia do unificador de um império. Game is HARD.
-  if (dano < 0.5) {
+  if (dano > 0.5) {
     console.log(`
 Você sacrificou o batalhão de seu amigo, e com isso, ele também. 
 
 Vejamos se valerá a pena!`);
-  } else if (dano > 0.5) {
+  } else if (dano < 0.5) {
     console.log(
-      `O 1ºB resiste de forma gloriosa. Canções serão cantadas sobre estes soldados.`
+      `O 1ºB resiste de forma gloriosa. Canções serão cantadas sobre estes soldados fiéis ao 
+      Grandioso Profeta RNGesus que lhes favorece em meio ao caos da batalha.`
     );
   }
 
@@ -149,6 +150,16 @@ Estão dizendo que falta honra em um covarde e que somente um covarde recusa um 
 sua batalha, mas certamente prejudicará a estabilidade e legitimidade de seu governo.`);
     }
   } else if (q4 == "n") {
+    console.log(`*** Você atacou com a infantaria antes dos arqueiros ***
+    
+    Essa não foi a escolha mais sábia. Sua infantaria está desprotegida contra as flechas. Seus arqueiros
+    se tornaram inúteis com essa decisão. Houve um dano significativo em seu exército, que ja tinha
+    desvantagem numérica.
+    ...
+    Mesmo perante essa desvantagem, seu exército domina o inimigo. 
+    Falta ainda finalizar o líder. O poderoso Lu Bu. Todos os seus soldados estão com a 
+    atenção voltada para vocês. Lu Bu solicita um duelo.
+    Aceitar desafio de Lu Bu? `)
     do {
       if (q5 != null) {
         console.log(wrgmsg);
@@ -156,6 +167,19 @@ sua batalha, mas certamente prejudicará a estabilidade e legitimidade de seu go
 
       var q5 = prompt(`[s] sim ou [n] não => `);
     } while (q5 != `s` && q5 != `n`);
+
+    if (q5 == 's') {
+      console.log(`Você aceita o desafio de Lü Bü.
+      Vocês estão em um terreno mais firme, ainda cheio de lama. Lu Bu está com a mobilidade levemente reduzida.
+      A luta dura por um longo período, entre esquivas e cruzamento de espadas. Até que Lu Bu
+      consegue feri-lo na perna com sua espada enferrujada `)    
+
+    }else if (q5=='n'){
+
+      console.log(`Você se recusa a duelar contra Lu Bu. Seus soldados ficam receosos sobre o motivo.
+Estão dizendo que falta honra em um covarde e que somente um covarde recusa um duelo. Isso não afeta
+sua batalha, mas certamente prejudicará a estabilidade e legitimidade de seu governo.`);
+    }
   }
 } else if (q3 == "n") {
   //q3=n
