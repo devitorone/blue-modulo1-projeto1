@@ -276,18 +276,28 @@ if (rslt==0){
   Você claramente não estava sóbrio. Tomou todas as decisões erradas. Essa batalha sozinha
   desmerece todas as suas conquistas anteriores`);
 }
-if (rslt==1){
-  console.log(``)
-}
-if (rslt==2){
-  console.log(``)
+if (rslt==1 || rslt==2){
+  console.log(`
+  Você perdeu a batalha, mas sobrevive para lutar um outro dia pelo trono.`)
 }
 if (rslt==3){
-  console.log(``)
+  console.log(`
+  Seus esforços foram notórios. Porém a ultima batalha foi muito violenta para seu exército
+  e foi praticamente um empate.  
+  Os soldados remanescentes não foram suficientes para impor uma unificação em todo o território`)
 }
 if (rslt==4){
-  console.log(``)
+  console.log(`
+  A batalha foi dura, mas sua superioridade como comandante foi crucial.
+  Suas escolhas o levaram a mitigar os números inimigos e vencer com tranquilidade`)
 }
 if (rslt==5){
-  console.log(``)
+  console.log(`
+  Sucesso não faz juz essa batalha. Ela foi ímpar em todos os quesitos. Você escolheu
+  o equipamento ideal. O fluxo da batlha estava em suas mãos. Sua bravura e inteligência serão
+  lembrados por gerações a seguir. Seu império é uma vontade dos Céus. Sua dinastia será duradoura 
+  e próspera. `);
+  if (dano<0){
+    console.log(`Séculos mais tarde descobriu-se que até mesmo SunTzu foi seu seguidor (o comandante do 1ºB).`)
+  }
 }
