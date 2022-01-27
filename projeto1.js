@@ -319,8 +319,9 @@ if (rslt==5){
   o equipamento ideal. O fluxo da batalha estava em suas mãos. Sua bravura e inteligência serão
   lembrados por gerações a seguir. Seu império é uma vontade dos Céus. Sua dinastia será duradoura 
   e próspera. `);
-  if (dano<0){
+  if (dano<0.5){
     console.log(`
+    Easter egg:
     Séculos mais tarde descobriu-se que até mesmo SunTzu foi seu seguidor (o comandante do 1ºB).`)
   }else{
 
